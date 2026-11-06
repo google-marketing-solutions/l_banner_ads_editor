@@ -71,7 +71,11 @@ main() {
   fi
 
   if [[ "${mode}" == "firebase" ]]; then
-    npm ci
+    if [[ -f "package-lock.json" ]]; then
+      npm ci
+    else
+      npm install
+    fi
     npm run build
     npx firebase-tools deploy --only hosting --project "${project_id}"
   elif [[ "${mode}" == "cloudrun" ]]; then

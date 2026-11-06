@@ -7,6 +7,13 @@ directly in the browser.
 
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://professional-services.googlesource.com/solutions/l_banner_ads_editor&cloudshell_tutorial=README.md)
 
+**This is not an officially supported Google product.**
+
+Eligibility for the
+[Google Open Source Software Vulnerability Rewards Program](https://bughunters.google.com/open-source-security)
+is determined by the
+[Google Open Source Software Vulnerability Reward Program Rules](https://bughunters.google.com/about/rules/open-source/google-open-source-software-vulnerability-reward-program-rules).
+
 --------------------------------------------------------------------------------
 
 ## Key Capabilities
@@ -106,7 +113,8 @@ Google Workspace domains or IAM groups without modifying application code.
 ## License & Experimental Software Disclaimer
 
 Copyright 2026 Google LLC. Licensed under the
-[Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+[Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). See
+[LICENSE](LICENSE).
 
 > **Experimental Notice**: This software is an experimental prototype provided
 > on an **"AS IS"** basis, without warranties or conditions of any kind, either
