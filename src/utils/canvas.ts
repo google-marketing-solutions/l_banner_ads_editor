@@ -652,12 +652,15 @@ export function drawElementBounds(
     }
   }
 
+  const coordSummary = `${Math.round(x)}, ${Math.round(y)} · ${Math.round(width)}×${Math.round(height)}`;
+  const badgeText =
+    isHovered || isDragged ? `${label} (${coordSummary})` : label;
   ctx.font = 'bold 15px sans-serif';
-  const labelMetrics = ctx.measureText(label);
+  const labelMetrics = ctx.measureText(badgeText);
   const badgeW = labelMetrics.width + 14;
   const badgeH = 24;
-  const badgeX = x + 6;
-  const badgeY = y + 6;
+  const badgeX = Math.max(6, Math.min(1920 - badgeW - 6, x + 6));
+  const badgeY = y - badgeH - 6 >= 6 ? y - badgeH - 6 : y + 6;
 
   ctx.setLineDash([]);
   ctx.fillStyle = isDragged
@@ -676,7 +679,7 @@ export function drawElementBounds(
   ctx.fillStyle = '#ffffff';
   ctx.textBaseline = 'middle';
   ctx.textAlign = 'left';
-  ctx.fillText(label, badgeX + 7, badgeY + badgeH / 2);
+  ctx.fillText(badgeText, badgeX + 7, badgeY + badgeH / 2);
 
   ctx.restore();
 }

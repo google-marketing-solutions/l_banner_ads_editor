@@ -62,6 +62,29 @@ describe('canvas rendering utilities', () => {
     );
   });
 
+  it('renders live coordinate and size summary in badge when hovered or dragged and clamps to canvas bounds', () => {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d')!;
+    const fillTextSpy = spyOn(ctx, 'fillText').and.callThrough();
+
+    drawElementBounds(ctx, {
+      x: 1850,
+      y: 4,
+      width: 240,
+      height: 120,
+      label: 'Headline',
+      isHovered: true,
+      isDragged: false,
+    });
+
+    expect(fillTextSpy).toHaveBeenCalled();
+    const [renderedText, drawX, drawY] = fillTextSpy.calls.mostRecent()
+      .args as [string, number, number];
+    expect(renderedText).toBe('Headline (1850, 4 · 240×120)');
+    expect(drawX).toBeLessThan(1920);
+    expect(drawY).toBe(10 + 12);
+  });
+
   it('fills the background canvas frame in drawAdFrame', () => {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d')!;
