@@ -5,7 +5,7 @@ application that enables advertisers and creative agencies to design,
 batch-generate, and export **1920x1080 L-Banner (L-Band) video ad variations**
 directly in the browser.
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://professional-services.googlesource.com/solutions/l_banner_ads_editor&cloudshell_tutorial=README.md)
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/google-marketing-solutions/l_banner_ads_editor&cloudshell_tutorial=README.md)
 
 **This is not an officially supported Google product.**
 
